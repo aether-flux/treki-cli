@@ -27,11 +27,17 @@ powershell -Command "iwr -useb https://raw.githubusercontent.com/aether-flux/tre
 
 ## Usage
 ### Commands
+#### Sending requests
 - **get <url>:** Send a GET request.
 - **post <url>:** Send a POST request.
 - **put <url>:** Send a PUT request.
 - **patch <url>:** Send a PATCH request.
 - **delete <url>:** Send a DELETE request.
+- **run <id>:** Run a saved request from the database by its ID.
+
+#### Authentication
+- **login:** Login to an account using email and password.
+- **whoami:** View details of logged in account, if logged in. Displays username and email.
 
 ### Options/Flags
 - **help or -h or --help :** Display help information about the CLI.
@@ -41,5 +47,5 @@ powershell -Command "iwr -useb https://raw.githubusercontent.com/aether-flux/tre
 
 ### Example Usage
 ```sh
-treki-cli post https://jsonplaceholder.typicode.com/posts -b '{"title": "New Post", "body": "Lorem ipsum dolor et smth smth.", "userId": 1}'
+treki post https://jsonplaceholder.typicode.com/posts -b '{"title": "New Post", "body": "Lorem ipsum dolor et smth smth.", "userId": 1}'
 ```
