@@ -16,8 +16,13 @@ curl -sSL https://raw.githubusercontent.com/aether-flux/treki-cli/main/scripts/l
 
 ### Windows
 For Windows users, open PowerShell (preferably in Administrator Mode) and run the following command :
+(For PowerShell)
 ```powershell
 iwr -useb https://raw.githubusercontent.com/aether-flux/treki-cli/main/scripts/windows/install.bat | iex
+```
+(For CMD)
+```cmd
+powershell -Command "iwr -useb https://raw.githubusercontent.com/aether-flux/treki-cli/main/scripts/windows/install.bat | iex"
 ```
 
 ## Usage
