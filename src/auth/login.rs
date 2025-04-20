@@ -33,7 +33,7 @@ pub async fn login() -> Result<(), Box<dyn std::error::Error + Send + Sync>> {
 
     let client = Client::new();
     let res = client
-        .post("http://localhost:5000/api/auth/login")
+        .post("https://treki-backend-production.up.railway.app/api/auth/login")
         .json(&LoginRequest {
             email: &email,
             password: &password,

@@ -83,7 +83,7 @@ async fn get_handler (mut req:reqwest::RequestBuilder, headers: Option<String>, 
 
 async fn run_req_by_id(id: usize, verbose: bool) -> Result<(), Box<dyn std::error::Error + Send + Sync>> {
     let tc = AsyncClient::new();
-    let url = format!("http://localhost:5000/api/requests/{}", id);
+    let url = format!("https://treki-backend-production.up.railway.app/api/requests/{}", id);
 
     let res = tc.get(&url).send().await?;
 

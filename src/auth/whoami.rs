@@ -26,7 +26,7 @@ pub fn get_decoded_token () -> Result<jsonwebtoken::TokenData<Claims>, Box<dyn s
 
     let decoded = decode::<Claims>(
         &token.token,
-        &DecodingKey::from_secret("your_secret_key".as_bytes()),
+        &DecodingKey::from_secret("superStrongSecret123!@#".as_bytes()),
         &Validation::new(Algorithm::HS256)
     )?;
 
@@ -36,7 +36,7 @@ pub fn get_decoded_token () -> Result<jsonwebtoken::TokenData<Claims>, Box<dyn s
 async fn get_user_details (id: usize) -> Result<UserDetails, Box<dyn std::error::Error>> {
     let client = Client::new();
     let res = client
-        .post("http://localhost:5000/api/auth/user")
+        .post("https://treki-backend-production.up.railway.app/api/auth/user")
         .json(&json!({ "id": id }))
         .send()
         .await?;
